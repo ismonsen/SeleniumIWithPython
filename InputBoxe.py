@@ -9,6 +9,7 @@ driver = webdriver.Chrome(service=s)
 
 driver.get('https://myaccount.google.com/?hl=ru&utm_source=OGB&utm_medium=act')
 driver.find_element(By.LINK_TEXT, 'Создать аккаунт').click()
+
 # подсчет количества элементов с таким классом
 input_boxes = driver.find_elements(By.CLASS_NAME, "whsOnd")
 print(len(input_boxes)) # 5
