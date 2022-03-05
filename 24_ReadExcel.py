@@ -3,7 +3,7 @@ import openpyxl
 path = 'data1.xlsx'
 
 wb = openpyxl.load_workbook(path)
-sheet = wb.get_sheet_by_name('Sheet1')
+sheet = wb['Sheet1']
 
 rows = sheet.max_row
 cols = sheet.max_column
