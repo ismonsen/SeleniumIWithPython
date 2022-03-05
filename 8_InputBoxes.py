@@ -12,7 +12,7 @@ driver.find_element(By.LINK_TEXT, 'Создать аккаунт').click()
 
 # подсчет количества элементов с таким классом
 input_boxes = driver.find_elements(By.CLASS_NAME, "whsOnd")
-print(len(input_boxes)) # 5
+print(len(input_boxes))     # 5
 
 # обращение как к элементу массива
 print(input_boxes[1].is_displayed())
