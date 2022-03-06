@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.service import Service
 
 
 class TestChrome(unittest.TestCase):
-    driver = webdriver.Chrome(service=Service('..\\chromedriver.exe'))
+    driver = webdriver.Chrome(service=Service('../../chromedriver.exe'))
 
     @classmethod
     def setUpClass(cls):

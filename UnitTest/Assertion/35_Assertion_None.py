@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.service import Service
 
 
 class TestChrome(unittest.TestCase):
-    driver = webdriver.Chrome(service=Service('..\\chromedriver.exe'))
+    driver = webdriver.Chrome(service=Service('..\\..\\chromedriver.exe'))
 
     @classmethod
     def setUpClass(cls):
@@ -17,14 +17,14 @@ class TestChrome(unittest.TestCase):
         cls.driver.quit()
 
     # сравнивается cправделивость утвеждений (True)
-    def test_search_true(self):
+    def test_search_none(self):
         self.driver.get('https://www.google.com/')
-        self.assertTrue('Google' == self.driver.title, 'Webpage title is not the same')
+        self.assertIsNone(self.driver.title, 'Webpage title is not none')
 
     # False
-    def test_search_false(self):
+    def test_search_not_none(self):
         self.driver.get('https://www.google.com/')
-        self.assertFalse('Yandex' == self.driver.title, 'Webpage title are the same')
+        self.assertIsNotNone(self.driver.title, 'Webpage title is none')
 
 
 if __name__ == '__main__':
